@@ -1,9 +1,8 @@
-
-#ifndef DATE_H
-#define DATE_H
+#ifndef DATE_H_EXISTS
+#define DATE_H_EXISTS
 #include <string>
 
-class Date {
+class Date{
     protected:
     std::string dateString;
     int day;
@@ -12,7 +11,7 @@ class Date {
 
     public:
     Date();
-    void init(const std::string& dateString);
+    void init(std::string dateString);
     void printDate();
 };
 
