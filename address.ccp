@@ -1,7 +1,8 @@
 #include "address.h"
 #include <iostream>
 
-Address::Address() : street(""), city(""), state(""), zip("") {}
+Address::Address(){ street(""), city(""), state(""), zip("") 
+}
 
 void Address::init(std::string st, std::string c, std::string s, std::string z) {
     street = st;
