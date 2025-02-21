@@ -1,17 +1,27 @@
-#include "data.h"
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include <string>
+#include "date.h"
 #include "address.h"
 
-#include<iostream>
-#include<sstream>
+class Student{
+    protected:
+    std::string studentString;
+    std::string firstName;
+    std::string lastName;
+    Date* dob;
+    Date* gradDate;
+    Address* address;
+    int creditHours;
+    public:
+    Student();
+    Student(std::string studentstring);
+    ~Student();
+    void init(const std::string studentString);
+    void printStudent();
+    std::string getLastFirst();
+    std::string getFirstName();
+};
 
-Student::student(){
-    studentString = "";
-    firstName = "";
-    lastName = "";
-    dob = new Date();
-    gradDate = new Date();
-    address = new Adress();
-    creditHours = 0;
-}
-
-
+#endif
