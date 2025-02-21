@@ -2,10 +2,19 @@
 #include <iostream>
 #include <sstream>
 
-Date::date();
+Date::Date(){
+    day = 0;
+    month = 0;
+    year = 0;
+}
 
+void Date::init(const std::string& dateString) {
+    std::stringstream ss(dateString);
+    char delimiter;
+    ss >> month >> delimiter >> day >> delimiter >> year;
+}
 
-
-voiddate::printdate(){
-    std::string months[] = {"Null", "Janurary", "feburary", "March", "april", " May", "June", "July", "august", "September", "October", "Novemeber", "December"}
+void Date::printDate() const {
+    std::string months[] = {"Null", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    std::cout << months[month] << " " << day << ", " << year << std::endl;
 }
