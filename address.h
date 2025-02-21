@@ -1,5 +1,5 @@
-#ifndef ADDRESS_H
-#define ADDRESS_H
+#ifndef ADDRESS_H_EXISTS
+#define ADDRESS_H_EXISTS
 #include <string>
 
 class Address{
