@@ -1,0 +1,40 @@
+Include Necessary Imports:
+Include <iostream>, <fstream>, <sstream>, <vector>, <string>, and "student.h".
+Declare functions to load students, print students, show student names, find a student, delete students, and present a menu.
+Main Function:
+Create a vector of Student pointers named students.
+Define a filename students.csv.
+Call loadStudents to populate the vector from the CSV file.
+Use a while loop to present a menu and get the user's choice.
+Execute appropriate actions based on the user's choice:
+If the choice is "1", call showStudentNames.
+If the choice is "2", call printStudents.
+If the choice is "3", call findStudent.
+If the choice is invalid, prompt the user to select a valid option.
+After the loop, call delStudents to clean up the vector before exiting.
+Function Implementations:
+loadStudents:
+Open the CSV file.
+For each line of the file:
+Create a Student instance on the heap.
+Initialize that instance with the string from the CSV file.
+Append that instance to the vector.
+Close the file.
+printStudents:
+Iterate through each student in the vector.
+Call printStudent method of each student.
+Print a separator line for readability.
+showStudentNames:
+Iterate through each student in the vector.
+Print the last and first names of each student.
+findStudent:
+Prompt the user to enter a last name.
+Iterate through each student in the vector.
+Check if the student's last name matches the input.
+If a match is found, print the student's full data.
+delStudents:
+Iterate through each student in the vector.
+Delete each student object to free up memory.
+menu:
+Present a menu with options to the user.
+Read the user's choice and return it.      
